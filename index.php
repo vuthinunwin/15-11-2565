@@ -65,6 +65,18 @@
         <br>
     	<p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
     <?php endif ?>
+	
+    <?php  if (isset($_SESSION['username']) && $result["roles"] == "admin") : ?>
+    	<p> Hi! <strong><?php echo "Admin"; ?></strong></p>
+        <br>
+        <p> Approve Organizer  </p>
+        <p> Approve Concert </p>
+        <p> Check Customer’s Bill </p>
+        <p> Delete Concert </p>
+	<p> Update Concert </p>
+        <br>
+    	<p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
+    <?php endif ?>
 </div>
 		
 </body>
